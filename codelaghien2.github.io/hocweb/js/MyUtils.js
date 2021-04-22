@@ -1,11 +1,16 @@
+
+
 function submitLogin() {
 	let email = $('#inputEmailAddress').val();
 	let password = $('#inputPassword').val();
-	// console.log('submitLogin: email = ', email);
+	var password2 = document.getElementById('inputEmailAddress').value;
+	console.log(email)
+	console.log('submitLogin: password2 = ', password2);
 	// console.log('submitLogin: password = ', password);
 
 	sessionStorage.setItem('email', email);
 	sessionStorage.setItem('password', password);
+
 
 	$.post('https://codelaghien.club/web/login.asp', {
 		username: email,
@@ -34,4 +39,9 @@ function logout() {
 function loadTable() {
 	console.log('loadTable');
 	$('#MyMain').load('tables2.html');
+}
+
+function logout_sencondary() {
+	alert('Khong cho logout dau!')
+
 }

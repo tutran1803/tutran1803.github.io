@@ -12,11 +12,42 @@
 		<title>Page Title - SB Admin</title>
 		<link href="css/styles.css" rel="stylesheet" />
 		<script
-			src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
+			src="https://cdnjs.cloudf lare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"
 			crossorigin="anonymous"
 		></script>
-		<script src="js/MyCookie.js"></script>
 		<script src="js/MyUtils.js"></script>
+		<script src="js/MyCookie.js"></script>
+<!-- Them bien style -->
+	<style>
+		.ribbon-highlight{
+			  position:relative;
+			  margin:0.1em;
+			}
+			.ribbon-highlight:before{
+			  content:"";
+			  z-index:-1;
+			  left:-0.5em;
+			  top:0.1em;
+			  border-width:0.5em;
+			  border-style:solid;
+			  border-color:lightgreen;
+			  position:absolute;
+			  width:100%;
+			  border-left-color:transparent;
+			  border-right-color:transparent;
+			}
+		.simple-highlight{
+			color: gray;
+			 background-color:yellow;
+			 padding:0.1em 0.2em;
+			}
+		/*a {
+			color: yellow;
+		}*/
+	</style>
+
+
+
 	</head>
 	<body class="bg-primary">
 		<div id="layoutAuthentication">
@@ -30,11 +61,15 @@
 								>
 									<div class="card-header">
 										<h3
-											class="text-center font-weight-light my-4"
+											class="text-center font-weight-light my-4",
+											style="color: black; font-size: 50px;font-weight: bold"
+
+
 										>
 											Login
 										</h3>
 									</div>
+
 									<div class="card-body">
 										<form onsubmit="return false;">
 											<div class="form-group">
@@ -77,6 +112,9 @@
 													>
 												</div>
 											</div>
+											<br/>
+											<span class="simple-highlight"; style="font-size: 15px">Thong tin se duoc xac nhan sau 24h</span> 
+
 											<div
 												class="form-group d-flex align-items-center justify-content-between mt-4 mb-0"
 											>
@@ -85,13 +123,24 @@
 													href="password.html"
 													>Forgot Password?</a
 												>
+												<div>
 												<button
 													class="btn btn-primary"
 													onclick="submitLogin();"
 												>
 													Login
 												</button>
+								
+												<button
+													
+													onclick="logout();";
+
+												>
+													Logout
+												</button>	
+												</div>
 											</div>
+
 										</form>
 									</div>
 									<div class="card-footer text-center">
